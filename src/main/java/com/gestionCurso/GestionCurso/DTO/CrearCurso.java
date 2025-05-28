@@ -2,6 +2,7 @@ package com.gestionCurso.GestionCurso.DTO;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 import org.antlr.v4.runtime.misc.NotNull;
 import jakarta.validation.constraints.*;
 import lombok.Data;
@@ -31,4 +32,8 @@ public class CrearCurso {
 
     @NotNull
     private LocalDate fechaFin;
+    
+    private List<HorarioDTO> horarios;
+    
+    private List<MaterialDTO> materiales;
 }

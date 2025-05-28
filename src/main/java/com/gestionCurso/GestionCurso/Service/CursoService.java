@@ -15,4 +15,6 @@ public interface CursoService {
     void eliminarCurso(Long id);
     Page<CursoDTO> listarCursos(Pageable pageable);
     CursoDTO cambiarEstado(Long id, EstadoCurso nuevoEstado);
+    void inscribirEstudiante(Long cursoId, Long estudianteId);
+
 }

@@ -37,4 +37,10 @@ public class UsuarioController {
     public Page<CursoDTO> listar(Pageable pageable) {
         return cursoService.listarCursos(pageable);
     }
+
+    @PostMapping("/{id}/inscribir")
+    public void inscribirEstudiante(@PathVariable Long id, @RequestParam Long estudianteId) {
+        cursoService.inscribirEstudiante(id, estudianteId);
+    }
+
 }
